@@ -27,7 +27,6 @@ class Program():
         image = tk.PhotoImage(file='ball.png')
         image_layout.create_image(200,200,anchor=tk.CENTER,image=image)
 
-
 class Window(tk.Frame):
     def __init__(self,window):
         tk.Frame.__init__(self,window)
