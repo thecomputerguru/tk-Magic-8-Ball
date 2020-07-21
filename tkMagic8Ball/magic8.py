@@ -8,7 +8,7 @@ class Program():
 
     def bttnPress():
         global image,images
-        if os.getcwd() == os.environ.get('HOME')+'/'+'tkMagic8Ball'+'/'+'Answers':
+        if os.path.basename(os.getcwd()) == 'Answers':
             pass
         else:
             os.chdir('Answers')
