@@ -39,7 +39,7 @@ class Window(tk.Frame):
 
         image_layout = tk.Canvas(self.window,height=472,width=474)
         question_frame = tk.LabelFrame(self.window,text='Question',height=60,width=350)
-        question = tk.Entry(self.window,width=40)
+        question = tk.Entry(self.window,width=35)
         bttn = tk.Button(self.window,text='Shake',command=Program.bttnPress)
         image_layout.place(x=53,y=10)
         question_frame.place(x=10,y=400)
