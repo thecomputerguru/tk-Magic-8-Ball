@@ -44,6 +44,7 @@ class Window(tk.Frame):
         question_frame.place(x=10,y=400)
         question.place(x=20,y=425)
         bttn.place(x=400,y=420)
+        
 root = tk.Tk()
 app = Window(root)
 Program.createImage()
