@@ -1,7 +1,7 @@
 # tk-Magic-8-Ball
 
 This is a magic 8 ball program using Tk written in Python. 
-Make sure that you keep the python script in the "tkMagic8Ball" directory. 
+Make sure that you keep the python script in the "tkMagic8Ball" directory and that "tkMagic8Ball" is the current working directory. The program will show an error if it's not the current working directory.
 
 If the python script or the image files are moved, the program will not work properly. 
 
