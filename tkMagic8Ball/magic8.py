@@ -22,6 +22,13 @@ class Program():
             image_layout.delete('all')
             image_layout.create_image(200,200,anchor=tk.CENTER,image=image)
 
+    def checkPath():
+        if os.path.basename(os.getcwd()) != 'tkMagic8Ball':
+            root.withdraw()
+            messagebox.showerror("Missing application files","Please verify that application files are in the same directory as the script.")
+        else:
+            pass
+
     def createImage():
         global image
         image = tk.PhotoImage(file='ball.png')
@@ -37,15 +44,16 @@ class Window(tk.Frame):
         self.window.resizable(height=False,width=False)
 
         image_layout = tk.Canvas(self.window,height=472,width=474)
-        question_frame = tk.LabelFrame(self.window,text='Question',height=60,width=350)
+        question_frame = tk.LabelFrame(self.window,text='Ask your question',height=60,width=350)
         question = tk.Entry(self.window,width=35)
         bttn = tk.Button(self.window,text='Shake',command=Program.bttnPress)
         image_layout.place(x=53,y=10)
         question_frame.place(x=10,y=400)
         question.place(x=20,y=425)
         bttn.place(x=400,y=420)
-        
+
 root = tk.Tk()
+Program.checkPath()
 app = Window(root)
 Program.createImage()
 root.mainloop()
