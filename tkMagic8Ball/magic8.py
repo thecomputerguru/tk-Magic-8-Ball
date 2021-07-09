@@ -8,7 +8,7 @@ class Program():
 
     def bttnPress():
         global image,images
-        if os.path.basename(os.getcwd()) == 'Answers':
+        if os.path.basename(os.getcwd()) == "Answers":
             pass
         else:
             os.chdir('Answers')
