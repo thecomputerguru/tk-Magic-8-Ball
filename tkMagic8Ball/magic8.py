@@ -11,12 +11,12 @@ class Program():
         if os.path.basename(os.getcwd()) == "Answers":
             pass
         else:
-            os.chdir('Answers')
+            os.chdir("Answers")
             images = []
             for i in os.listdir(os.getcwd()):
                 images.append(i)
         if len(question.get()) == 0:
-            messagebox.showinfo('Program Info','Please ask a question.')
+            messagebox.showinfo("Program Info","Please ask a question.")
         else:
             image.config(file=random.choice(images))
             image_layout.delete('all')
@@ -31,7 +31,7 @@ class Program():
 
     def createImage():
         global image
-        image = tk.PhotoImage(file='ball.png')
+        image = tk.PhotoImage(file="ball.png")
         image_layout.create_image(200,200,anchor=tk.CENTER,image=image)
 
 class Window(tk.Frame):
@@ -39,8 +39,8 @@ class Window(tk.Frame):
         tk.Frame.__init__(self,window)
         global image_layout,question,status_label
         self.window = window
-        self.window.title('tk Magic 8 Ball')
-        self.window.geometry('500x500')
+        self.window.title("tk Magic 8 Ball")
+        self.window.geometry("500x500")
         self.window.resizable(height=False,width=False)
 
         image_layout = tk.Canvas(self.window,height=472,width=474)
