@@ -11,7 +11,10 @@ class Program():
         if os.path.basename(os.getcwd()) == "Answers":
             pass
         else:
-            os.chdir("Answers")
+            try:
+                os.chdir("Answers")
+            except FileNotFoundError:
+                messagebox.showerror("Directory Not Found","Directory with program images could not be found")
             images = []
             for i in os.listdir(os.getcwd()):
                 images.append(i)
